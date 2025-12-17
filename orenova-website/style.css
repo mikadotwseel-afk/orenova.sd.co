@@ -1,0 +1,395 @@
+/* =====================
+   Global
+===================== */
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #eef3f8;
+    color: #070707;
+    padding-right: 140px; /* مساحة للقائمة الجانبية */
+}
+
+a {
+    text-decoration: none;
+    transition: 0.3s ease;
+}
+
+/* =====================
+   Header
+===================== */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 60px;
+    background-color: #1beac1;
+}
+
+.logo h1 {
+    margin: 0;
+    color: #050505;
+    letter-spacing: 3px;
+}
+
+.logo span {
+    font-size: 14px;
+    color: #000000;
+}
+
+/* =====================
+   Hero
+===================== */
+.hero {
+    height: 90vh;
+    background-image: url("images/hero.png");
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+
+.hero::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-color: rgba(250, 250, 251, 0.78);
+}
+
+.hero-content {
+    position: relative;
+    z-index: 1;
+    padding: 140px 60px;
+    max-width: 800px;
+}
+
+.hero-content h2 {
+    font-size: 46px;
+    color: #070707;
+}
+
+.hero-content p {
+    font-size: 20px;
+    line-height: 1.6;
+}
+
+/* =====================
+   Sections
+===================== */
+.section {
+    padding: 80px 60px;
+    animation: fadeUp 0.8s ease;
+}
+
+.section h3 {
+    font-size: 32px;
+    color: #000000;
+    margin-bottom: 25px;
+}
+
+.section p {
+    max-width: 900px;
+    line-height: 1.8;
+    font-size: 17px;
+}
+
+.section.dark {
+    background-color: #f6f6f6;
+}
+
+/* =====================
+   Cards / Vision
+===================== */
+.cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 25px;
+    margin-top: 40px;
+}
+
+.card {
+    background-color: #134343;
+    padding: 25px;
+    border-left: 4px solid #aaff49;
+}
+
+.card h4 {
+    color: #ffffff;
+}
+
+/* =====================
+   Mission
+===================== */
+.mission-item {
+    display: flex;
+    gap: 25px;
+    margin-bottom: 30px;
+}
+
+.mission-item span {
+    font-size: 32px;
+    font-weight: bold;
+    color: #c71b1b;
+}
+
+/* =====================
+   Services
+===================== */
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    margin-top: 50px;
+}
+
+.service-box {
+    background-color: #1c344d;
+    padding: 30px;
+    border-top: 4px solid #7f96ea;
+}
+
+.service-box h4 {
+    color: #ffffff;
+}
+
+/* =====================
+   Minerals
+===================== */
+.minerals-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 30px;
+    margin-top: 50px;
+}
+
+.mineral-box {
+    background-color: #449e86;
+    padding: 30px;
+    border-left: 4px solid #0e2b2b;
+}
+
+.mineral-box h4 {
+    color: #ffffff;
+}
+
+/* =====================
+   Why Choose
+===================== */
+.why-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 30px;
+    margin-top: 50px;
+}
+
+.why-box {
+    background-color: #47cdb0;
+    padding: 30px;
+    border-bottom: 4px solid #19322d;
+}
+
+.why-box h4 {
+    color: #ffffff;
+}
+
+/* Team Section */
+.team-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 25px;
+    margin-top: 40px;
+}
+
+.team-box {
+    background-color: #f7f8fa;
+    padding: 20px;
+    text-align: center;
+    font-weight: bold;
+    border-top: 4px solid #000000;
+    font-size: 16px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+/* تأثير Hover */
+.team-box:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+}
+
+/* الصور دائرية */
+.team-box img {
+    width: 120px;       /* حجم الصورة */
+    height: 120px;
+    object-fit: cover;
+    border-radius: 50%; /* دائرة كاملة */
+    border: 3px solid #000; /* اختياري: إطار حول الصورة */
+}
+
+/* اسم العضو والدور */
+.team-box .name {
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.team-box .role {
+    font-size: 14px;
+    color: #555;
+    text-align: center;
+}
+
+/* =====================
+   Contact
+===================== */
+.contact-box {
+    background-color: #f5f8fb;
+    padding: 35px;
+    max-width: 600px;
+    border-left: 4px solid #000000;
+}
+
+/* =====================
+   Footer
+===================== */
+.footer {
+    text-align: center;
+    padding: 25px;
+    background-color: #fcfcfc;
+}
+
+/* =====================
+   Side Navigation
+===================== */
+.side-nav {
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    background-color: #081421;
+    padding: 40px 20px;
+    border-left: 3px solid #d4af37;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    z-index: 999;
+}
+
+.side-nav a {
+    color: #ffffff;
+    font-weight: bold;
+    margin-bottom: 25px;
+    font-size: 17px;
+}
+
+.side-nav a:hover {
+    color: #d4af37;
+    transform: translateX(-8px);
+}
+
+/* =====================
+   Animations
+===================== */
+@keyframes fadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* =====================
+   Responsive
+===================== */
+@media (max-width: 768px) {
+
+    body {
+        padding-right: 0;
+    }
+
+    .side-nav {
+        display: none;
+    }
+
+    .header {
+        flex-direction: column;
+        text-align: center;
+        padding: 20px;
+    }
+
+    .hero-content {
+        padding: 80px 20px;
+    }
+
+    .hero-content h2 {
+        font-size: 30px;
+    }
+
+    .section {
+        padding: 60px 20px;
+    }
+}
+/* Contact Grid - Vertical Left */
+.contact-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    margin-top: 40px;
+    max-width: 460px;
+    align-items: flex-start;
+}
+
+/* Contact Card */
+.contact-card {
+    width: 100%;
+    padding: 30px 28px;          /* زيادة طول المستطيل */
+    background-color: #ffffff;
+    font-size: 17px;
+    line-height: 1.9;            /* زيادة طول النص */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* العنوان داخل المستطيل */
+.contact-card strong {
+    display: block;
+    margin-bottom: 12px;
+    font-size: 18px;
+}
+
+/* Borders */
+.contact-card.green {
+    border: 2px solid #1fa37a;
+}
+
+.contact-card.gray {
+    border: 2px solid #9ca3af;
+}
+
+/* Hover Effect */
+.contact-card:hover {
+    transform: scale(1.04);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.12);
+}
+
+/* Quote Text */
+.contact-quote {
+    margin-top: 55px;
+    font-size: 22px;
+    font-weight: bold;
+    color: #1f2933;
+    max-width: 700px;
+    line-height: 1.6;
+}
+/* Force Team Images to be Perfect Circles */
+.team-box img {
+    width: 130px;
+    height: 130px;
+    border-radius: 50%;
+    object-fit: cover;
+    display: block;
+    border: 3px solid #000000;
+}
